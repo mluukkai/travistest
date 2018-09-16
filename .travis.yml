@@ -6,3 +6,10 @@ rvm:
 script:
  - bundle exec rails db:migrate 
  - bundle exec rspec -fd spec
+
+ deploy:
+  provider: heroku
+  app: whispering-retreat-30806
+  api_key:
+    secure: "KEa7BTHn16fS0tSCntarOR3QXwKbQIebprYUr//zfierqfmtN9uLjNCyuB4WgSbK54M3OjjeyVrJIPXBu522AZ7eY8phApYI/ZYOw1wemjVdUYqqS6ukzo8S+ND/TwpRlSqd1WCISQo2JiXEEBUH3vW5gBBLn3+dKX2f1HL478rrAzYhA/mzmSCAjLFB7ZAWjnVOV9JCgNUlvtpghD1fJ0JQzbXRGwI9+0QwOxN17dby/7Djj/wwkxB5HCQbzNFlqrXEyGy28tugO0yTHDTyKNKpDQnosoVOp64IA3UAfIkVLQi+hlyGPMz9ska2Hw7oZKbdKTB0m1vKC0mqUHBBGpwm428/WMIDLxUIJnRIVAq0OT5ZOZI0xPEb8UhZ0UnWYeNkOiCv0BhmuxX03SfslziTAZEF/B1Avt7hpk1GS2f/0ntttOMNq2M8LAbePSARbGPus31isNMirWyBqOmOZku6iqTtX2TAuO37DxVNQKTSOxZdEtEMHvOKuxVPQ0Zeea+Pw4yUM1CF5RU5eQ2B44lcr2YMqqIN3FvErVSlR6AOzt0PITZxxygFuEAq8Hz8Cc1R864CX6C6yztAys5/76lKsj2GQCbZME7R2WCcyUoWOeFHQzkUeoqro5pbZRfDWGYYFGnef4mjeGKm44S9kRpQSIa6AFqMCrJH8+Crs+g="
+  run: "rake db:migrate"
