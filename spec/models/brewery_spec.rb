@@ -5,4 +5,9 @@ RSpec.describe Brewery, type: :model do
     b = Brewery.create name: 'test'
     expect(b.name).to eq('test')
   end
+
+  it 'availability' do
+    b = Brewery.new 
+    expect(b.where).to eq('oljenkorsi')
+  end
 end
